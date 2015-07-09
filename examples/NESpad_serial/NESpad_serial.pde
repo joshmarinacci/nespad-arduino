@@ -10,7 +10,7 @@
 #include <NESpad.h>
 
 // put your own strobe/clock/data pin numbers here -- see the pinout in readme.txt
-SNESpad nintendo = SNESpad(2,3,4);
+NESpad nintendo = NESpad(2,3,4);
 
 byte state = 0;
 

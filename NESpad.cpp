@@ -1,6 +1,6 @@
 /*
   NESpad - Arduino library for interfacing with a NES joystick
-
+  Version: 1.4 (07/09/2015) - Used INPUT_PULLUP to avoid floating ground when controller disconnected
   Version: 1.3 (11/12/2010) - get rid of shortcut constructor - seems to be broken
   Version: 1.2 (05/25/2009) - put pin numbers in constructor (Pascal Hahn)
   Version: 1.1 (09/22/2008) - fixed compilation errors in arduino 0012 (Rob Duarte)
@@ -45,7 +45,7 @@ NESpad::NESpad(int strobe, int clock, int data)
   {
     pinMode(strobe, OUTPUT);
     pinMode(clock,  OUTPUT);
-    pinMode(data, INPUT);
+    pinMode(data, INPUT_PULLUP);
   }
 
 byte NESpad::buttons(void)
